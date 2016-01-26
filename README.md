@@ -27,7 +27,7 @@ In addition to usual `react-addons-test-utils` helpers there are few new which l
 import { BEM } from 'rebem';
 import TestUtils from 'rebem-test-utils';
 
-const tree = reBEMTestUtils.renderIntoDocument(
+const tree = TestUtils.renderIntoDocument(
     BEM({ block: 'block' },
         BEM({ block: 'block', elem: 'elem' }),
         BEM({ block: 'block', elem: 'elem' })
@@ -51,7 +51,7 @@ console.log(
 import { BEM } from 'rebem';
 import TestUtils from 'rebem-test-utils';
 
-const tree = reBEMTestUtils.renderIntoDocument(
+const tree = TestUtils.renderIntoDocument(
     BEM({ block: 'block' },
         BEM({ block: 'block', elem: 'elem' })
     )
