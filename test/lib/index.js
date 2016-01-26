@@ -37,7 +37,7 @@ class TestSingle extends React.Component {
         return React.createElement(
             'div',
             null,
-            React.createElement('div', props)
+            React.createElement('span', props)
         );
     }
 }
@@ -47,43 +47,86 @@ class TestMultiple extends React.Component {
         return React.createElement(
             'div',
             null,
-            React.createElement('div', props),
-            React.createElement('div', props)
+            React.createElement('span', props),
+            React.createElement('span', props)
         );
     }
 }
 
 describe('reBEMTestUtils', function() {
-    it('scryRenderedDOMComponentsWithBEM', function() {
-        const root = reBEMTestUtils.renderIntoDocument(
-            React.createElement(TestMultiple)
-        );
+    describe('isCompositeComponentWithBEM', function() {
+        it('is function', function() {
+            assert.ok(
+                typeof reBEMTestUtils.isCompositeComponentWithBEM === 'function'
+            );
+        });
 
-        const result = reBEMTestUtils.scryRenderedDOMComponentsWithBEM(root, bemjson);
+        it('simple', function() {
+            const tree = reBEMTestUtils.renderIntoDocument(
+                React.createElement(TestSingle)
+            );
+            const component = reBEMTestUtils.findRenderedDOMComponentWithTag(tree, 'span');
 
-        assert.equal(result.length, 2);
+            assert.ok(
+                reBEMTestUtils.isCompositeComponentWithBEM(component, bemjson)
+            );
+        });
+    });
+
+    describe('scryRenderedDOMComponentsWithBEM', function() {
+        it('is function', function() {
+            assert.ok(
+                typeof reBEMTestUtils.scryRenderedDOMComponentsWithBEM === 'function'
+            );
+        });
+
+        it('simple', function() {
+            const tree = reBEMTestUtils.renderIntoDocument(
+                React.createElement(TestMultiple)
+            );
+
+            const result = reBEMTestUtils.scryRenderedDOMComponentsWithBEM(tree, bemjson);
+
+            assert.strictEqual(result.length, 2);
+        });
+
+        it('not found', function() {
+            const tree = reBEMTestUtils.renderIntoDocument(
+                React.createElement(TestMultiple)
+            );
+
+            const result = reBEMTestUtils.scryRenderedDOMComponentsWithBEM(tree, { block: 'beep' });
+
+            assert.strictEqual(result.length, 0);
+        });
     });
 
     describe('findRenderedDOMComponentWithBEM', function() {
+        it('is function', function() {
+            assert.ok(
+                typeof reBEMTestUtils.findRenderedDOMComponentWithBEM === 'function'
+            );
+        });
+
         it('simple', function() {
-            const root = reBEMTestUtils.renderIntoDocument(
+            const tree = reBEMTestUtils.renderIntoDocument(
                 React.createElement(TestSingle)
             );
 
-            const result = reBEMTestUtils.findRenderedDOMComponentWithBEM(root, bemjson);
+            const result = reBEMTestUtils.findRenderedDOMComponentWithBEM(tree, bemjson);
 
             assert.ok(reBEMTestUtils.isDOMComponent(result));
         });
 
-        it('"Did not find exactly one match"', function() {
+        it('did not find exactly one match', function() {
             const msg = 'Did not find exactly one match (found: 2) for bemjson:';
-            const root = reBEMTestUtils.renderIntoDocument(
+            const tree = reBEMTestUtils.renderIntoDocument(
                 React.createElement(TestMultiple)
             );
 
             assert.throws(
                 function() {
-                    reBEMTestUtils.findRenderedDOMComponentWithBEM(root, bemjson);
+                    reBEMTestUtils.findRenderedDOMComponentWithBEM(tree, bemjson);
                 },
                 function(error) {
                     if (error.message.indexOf(msg) === 0) {

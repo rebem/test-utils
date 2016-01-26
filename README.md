@@ -21,6 +21,26 @@ In addition to usual `react-addons-test-utils` helpers there are few new which l
 * `mix`
 * `tag`
 
+### `isCompositeComponentWithBEM(instance, bem)`
+
+```js
+import { BEM } from 'rebem';
+import TestUtils from 'rebem-test-utils';
+
+const tree = TestUtils.renderIntoDocument(
+    BEM({ block: 'block' },
+        BEM({ block: 'block', elem: 'elem' })
+    )
+);
+
+const elem = TestUtils.findRenderedDOMComponentWithClass(tree, 'block__elem');
+
+console.log(
+    TestUtils.isCompositeComponentWithBEM(elem, { block: 'block', elem: 'elem' })
+);
+// true
+```
+
 ### `scryRenderedDOMComponentsWithBEM(tree, bem)`
 
 ```js
