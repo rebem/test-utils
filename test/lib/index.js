@@ -17,20 +17,7 @@ const props = {
     ],
     tag: 'span'
 };
-const bemjson = {
-    block: 'block',
-    elem: 'elem',
-    mods: {
-        mod: 'val'
-    },
-    mix: [
-        {
-            block: 'block2',
-            elem: 'elem2'
-        }
-    ],
-    tag: 'span'
-};
+const bemjson = { ...props };
 
 class TestSingle extends React.Component {
     render() {
