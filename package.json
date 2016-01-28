@@ -14,8 +14,7 @@
   "dependencies": {
     "react": "0.14.x",
     "react-addons-test-utils": "0.14.x",
-    "lodash.isequal": "4.0.x",
-    "jsdom": "7.2.x"
+    "lodash.isequal": "4.0.x"
   },
   "devDependencies": {
     "husky": "0.10.x",
@@ -32,7 +31,8 @@
     "eslint-plugin-babel": "3.0.x",
     "eslint-config-rebem": "0.2.x",
 
-    "mocha": "2.3.x",
+    "jsdom": "8.0.x",
+    "mocha": "2.4.x",
     "babel-istanbul": "0.6.x",
     "codecov": "1.0.x",
     "chokidar-cli": "1.2.x"
