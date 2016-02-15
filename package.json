@@ -13,8 +13,8 @@
   "files": [ "build/" ],
   "dependencies": {
     "react": "0.14.x",
-    "react-addons-test-utils": "0.14.x",
-    "lodash.isequal": "4.0.x"
+    "rebem": "0.4.x",
+    "react-addons-test-utils": "0.14.x"
   },
   "devDependencies": {
     "husky": "0.10.x",

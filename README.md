@@ -19,7 +19,6 @@ In addition to usual `react-addons-test-utils` helpers there are few new which l
 * `elem`
 * `mods`
 * `mix`
-* `tag`
 
 ### `isCompositeComponentWithBEM(instance, bem)`
 

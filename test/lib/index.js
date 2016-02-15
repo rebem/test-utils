@@ -1,4 +1,5 @@
 import React from 'react';
+import { BEM } from 'rebem';
 import assert from 'assert';
 
 import reBEMTestUtils from '../../lib/';
@@ -24,7 +25,7 @@ class TestSingle extends React.Component {
         return React.createElement(
             'div',
             null,
-            React.createElement('span', props)
+            BEM(props)
         );
     }
 }
@@ -34,8 +35,8 @@ class TestMultiple extends React.Component {
         return React.createElement(
             'div',
             null,
-            React.createElement('span', props),
-            React.createElement('span', props)
+            BEM(props),
+            BEM(props)
         );
     }
 }
