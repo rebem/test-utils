@@ -130,9 +130,7 @@ describe('reBEMTestUtils', function() {
                     reBEMTestUtils.findRenderedDOMComponentWithBEM(tree, bemjson);
                 },
                 function(error) {
-                    if (error.message.indexOf(msg) === 0) {
-                        return true;
-                    }
+                    return error.message.indexOf(msg) === 0;
                 }
             );
         });
