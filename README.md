@@ -13,14 +13,24 @@ npm i -D rebem-test-utils
 
 ## Overview
 
-In addition to usual `react-addons-test-utils` helpers there are few new which lets you search for components by [BEM PropTypes](https://github.com/rebem/rebem#bem-proptypes):
+In addition to usual [React Test Utilities](https://facebook.github.io/react/docs/test-utils.html) methods there are few new which lets you search for components by [BEM PropTypes](https://github.com/rebem/rebem#bem-proptypes):
 
-* `block`
-* `elem`
-* `mods`
-* `mix`
+```js
+{
+    block
+    elem
+    mods
+    mix
+}
+```
 
-### `isCompositeComponentWithBEM(instance, bem)`
+This object may be called `bemjson`.
+
+## API
+
+### `isCompositeComponentWithBEM(instance, bemjson)`
+
+In addition to [`isCompositeComponentWithType()`](https://facebook.github.io/react/docs/test-utils.html#iscompositecomponentwithtype).
 
 ```js
 import { BEM } from 'rebem';
@@ -40,7 +50,9 @@ console.log(
 // true
 ```
 
-### `scryRenderedDOMComponentsWithBEM(tree, bem)`
+### `scryRenderedDOMComponentsWithBEM(tree, bemjson)`
+
+In addition to [`scryRenderedDOMComponentsWithClass()`](https://facebook.github.io/react/docs/test-utils.html#scryrendereddomcomponentswithclass).
 
 ```js
 import { BEM } from 'rebem';
@@ -64,7 +76,9 @@ console.log(
 // true
 ```
 
-### `findRenderedDOMComponentWithBEM(tree, bem)`
+### `findRenderedDOMComponentWithBEM(tree, bemjson)`
+
+In addition to [`findRenderedDOMComponentWithClass()`](https://facebook.github.io/react/docs/test-utils.html#findrendereddomcomponentwithclass).
 
 ```js
 import { BEM } from 'rebem';
