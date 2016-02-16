@@ -55,8 +55,9 @@ describe('reBEMTestUtils', function() {
             );
             const component = reBEMTestUtils.findRenderedDOMComponentWithTag(tree, 'span');
 
-            assert.ok(
-                reBEMTestUtils.isCompositeComponentWithBEM(component, bemjson)
+            assert.strictEqual(
+                reBEMTestUtils.isCompositeComponentWithBEM(component, bemjson),
+                true
             );
         });
 
@@ -66,7 +67,7 @@ describe('reBEMTestUtils', function() {
             );
             const component = reBEMTestUtils.findRenderedDOMComponentWithTag(tree, 'span');
 
-            assert.equal(
+            assert.strictEqual(
                 reBEMTestUtils.isCompositeComponentWithBEM(component, { block: 'block' }),
                 false
             );
