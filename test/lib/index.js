@@ -49,7 +49,7 @@ describe('reBEMTestUtils', function() {
             );
         });
 
-        it('simple', function() {
+        it('true', function() {
             const tree = reBEMTestUtils.renderIntoDocument(
                 React.createElement(TestSingle)
             );
@@ -57,6 +57,18 @@ describe('reBEMTestUtils', function() {
 
             assert.ok(
                 reBEMTestUtils.isCompositeComponentWithBEM(component, bemjson)
+            );
+        });
+
+        it('false', function() {
+            const tree = reBEMTestUtils.renderIntoDocument(
+                React.createElement(TestSingle)
+            );
+            const component = reBEMTestUtils.findRenderedDOMComponentWithTag(tree, 'span');
+
+            assert.equal(
+                reBEMTestUtils.isCompositeComponentWithBEM(component, { block: 'beep' }),
+                false
             );
         });
     });
