@@ -67,7 +67,7 @@ describe('reBEMTestUtils', function() {
             const component = reBEMTestUtils.findRenderedDOMComponentWithTag(tree, 'span');
 
             assert.equal(
-                reBEMTestUtils.isCompositeComponentWithBEM(component, { block: 'beep' }),
+                reBEMTestUtils.isCompositeComponentWithBEM(component, { block: 'block' }),
                 false
             );
         });
@@ -95,7 +95,7 @@ describe('reBEMTestUtils', function() {
                 React.createElement(TestMultiple)
             );
 
-            const result = reBEMTestUtils.scryRenderedDOMComponentsWithBEM(tree, { block: 'beep' });
+            const result = reBEMTestUtils.scryRenderedDOMComponentsWithBEM(tree, { block: 'block' });
 
             assert.strictEqual(result.length, 0);
         });
