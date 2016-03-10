@@ -17,20 +17,8 @@
     "react-addons-test-utils": "0.14.x"
   },
   "devDependencies": {
-    "start": "4.x.x",
-    "start-pretty-reporter": "0.x.x",
     "start-babel-cli": "1.x.x",
-    "start-env": "0.x.x",
-    "start-files": "0.x.x",
-    "start-watch": "1.x.x",
-    "start-clean": "1.x.x",
-    "start-read": "0.x.x",
-    "start-babel": "2.x.x",
-    "start-write": "1.x.x",
-    "start-eslint": "2.x.x",
-    "start-mocha": "1.x.x",
-    "start-coverage": "1.x.x",
-    "start-codecov": "1.x.x",
+    "start-rebem-preset": "0.x.x",
 
     "rebem": "0.7.x",
 
@@ -38,18 +26,16 @@
     "babel-preset-stage-2": "6.5.x",
     "babel-plugin-add-module-exports": "0.1.x",
 
-    "eslint": "2.2.x",
     "babel-eslint": ">5.0.0-beta1",
     "eslint-plugin-babel": "3.1.x",
-    "eslint-config-rebem": "1.0.x",
+    "eslint-config-rebem": "0.3.x",
 
     "jsdom": "8.1.x",
     "babel-istanbul": "0.6.x",
-
     "husky": "0.11.x"
   },
   "scripts": {
-    "start": "start-runner ./tasks",
+    "start": "start-runner start-rebem-preset",
     "prepush": "npm start prepush",
     "prepublish": "npm start build"
   },
