@@ -2,6 +2,7 @@
 [![travis](http://img.shields.io/travis/rebem/test-utils.svg?style=flat-square)](https://travis-ci.org/rebem/test-utils)
 [![coverage](https://img.shields.io/codecov/c/github/rebem/test-utils.svg?style=flat-square)](https://codecov.io/github/rebem/test-utils)
 [![deps](https://img.shields.io/gemnasium/rebem/test-utils.svg?style=flat-square)](https://gemnasium.com/rebem/test-utils)
+[![gitter](https://img.shields.io/badge/gitter-join_chat_%E2%86%92-46bc99.svg?style=flat-square)](https://gitter.im/rebem/rebem)
 
 [reBEM](https://github.com/rebem/rebem) addons for [React Test Utilities](https://facebook.github.io/react/docs/test-utils.html).
 
