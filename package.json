@@ -31,7 +31,7 @@
     "eslint-config-rebem": "0.3.x",
 
     "jsdom": "8.1.x",
-    "babel-istanbul": "0.6.x",
+    "babel-istanbul": "0.7.x",
     "husky": "0.11.x"
   },
   "scripts": {
