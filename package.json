@@ -1,6 +1,6 @@
 {
   "name": "rebem-test-utils",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "reBEM addons for React Test Utilities",
   "keywords": [ "rebem", "react", "test-utils", "tests" ],
   "homepage": "https://github.com/rebem/test-utils",
