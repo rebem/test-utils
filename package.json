@@ -12,11 +12,11 @@
   "main": "build/index.js",
   "files": [ "build/" ],
   "dependencies": {
-    "react": "0.14.x",
     "rebem-classname": "0.1.x",
     "react-addons-test-utils": "0.14.x"
   },
   "devDependencies": {
+    "react": "0.14.x",
     "start-babel-cli": "1.x.x",
     "start-rebem-preset": "0.x.x",
 
