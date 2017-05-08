@@ -1,3 +1,4 @@
+[![maintenance](https://img.shields.io/badge/maintained-no-red.svg?style=flat-square)](http://unmaintained.tech)
 [![npm](https://img.shields.io/npm/v/rebem-test-utils.svg?style=flat-square)](https://www.npmjs.com/package/rebem-test-utils)
 [![travis](http://img.shields.io/travis/rebem/test-utils.svg?style=flat-square)](https://travis-ci.org/rebem/test-utils)
 [![coverage](https://img.shields.io/codecov/c/github/rebem/test-utils.svg?style=flat-square)](https://codecov.io/github/rebem/test-utils)
